@@ -1,0 +1,51 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+             x:Class="MauiAppEvento.Views.CadastroEvento"
+             Title="Cadastro de Evento"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="Cadastro de Evento"
+                   FontSize="40"
+                   FontFamily="ConcertOne-Regular"
+                   TextColor="Goldenrod"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="NomeEntry"
+                   Placeholder="Nome do Evento" />
+
+            <DatePicker x:Name="DataInicioPicker"
+            MinimumDate="{x:Static sys:DateTime.Now}"
+            Format="dd/MM/yyyy" />
+
+            <DatePicker x:Name="DataTerminoPicker"
+            MinimumDate="{x:Static sys:DateTime.Now}"
+            Format="dd/MM/yyyy" />
+
+
+            <Label Text="Número de Participantes" TextColor="Goldenrod" />
+            <Entry x:Name="NumeroParticipantesEntry"
+                   Keyboard="Numeric"
+                   Placeholder="Número de participantes" />
+
+            <Label Text="Local do Evento" TextColor="Goldenrod" />
+            <Entry x:Name="LocalEntry"
+                   Placeholder="Local do Evento" />
+
+            <Label Text="Custo por Participante" TextColor="Goldenrod" />
+            <Entry x:Name="CustoPorParticipanteEntry"
+                   Keyboard="Numeric"
+                   Placeholder="Custo por Participante" />
+
+            <Button Text="Cadastrar"
+                    Clicked="OnCadastrarClicked"
+                    BackgroundColor="Goldenrod" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+
+
+     
